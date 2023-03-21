@@ -1,0 +1,40 @@
+.news {
+    padding: 21px 0 24px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.newsLeft {
+    max-width: 460px;
+}
+.newsLeft h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 500;
+}
+.newsLeft p {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+}
+.newsRight {
+    width: 100%;
+    max-width: 635px;
+    min-height: 465px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.newsRight img {
+    position: absolute;
+    opacity: 0; 
+    transition: opacity 0.2s ease-in-out;
+}
+.newsRight img.active {
+    opacity: 1;
+}

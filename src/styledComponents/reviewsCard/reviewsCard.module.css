@@ -1,0 +1,32 @@
+.card {
+    border-radius: 10px;
+    padding: 30px 28px 25px;
+    width: 395px;
+    height: 232px;
+    background: white;
+}
+.info {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 20px;
+}
+.info__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.name {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.estimates__box {
+    display: flex;
+    gap: 4px;
+}
+.comment {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+}

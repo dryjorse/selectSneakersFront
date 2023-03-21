@@ -1,0 +1,12 @@
+.btn {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #006195;
+}
+.btn, .btn a {
+    color: white !important;
+    font-size: 20px !important; 
+    line-height: 15px !important;
+}

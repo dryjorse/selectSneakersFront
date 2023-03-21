@@ -1,0 +1,22 @@
+.main {
+    padding: 55px 0 175px;
+    text-align: center;
+}
+.photo__box {
+    margin-bottom: 55px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line {
+    position: absolute;
+    width: 100%;
+    height: 14px;
+    background: #006195;
+    z-index: -1;
+}
+.descr {
+    font-size: 30px;
+    line-height: 30px;
+}

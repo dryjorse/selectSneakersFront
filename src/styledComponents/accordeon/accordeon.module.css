@@ -1,0 +1,18 @@
+.head {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+.arrow {
+    transition: all 0.3s ease-in-out;
+}
+.active .arrow {
+    transform: rotate(-180deg);
+}
+.body {
+    transition: max-height 0.3s ease-in-out;
+    overflow: scroll;
+}
+.body::-webkit-scrollbar {
+    display: none;
+}

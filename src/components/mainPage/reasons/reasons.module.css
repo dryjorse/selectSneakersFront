@@ -1,0 +1,28 @@
+.reasons {
+    padding: 35px 0 170px;
+}
+.list {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.list li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    cursor: default;
+}
+.item__descr {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2px;
+}
+.item__descr h3 {
+    font-size: 18px;
+    line-height: 27px;
+}
+.item__descr span {
+    color: #898989;
+}

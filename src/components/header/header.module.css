@@ -1,0 +1,37 @@
+header {
+    padding-top: 17px;
+}
+.nav {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #8E8E8F;
+}
+.nav ul {
+    display: flex;
+    gap: 18px;
+    color: #322929;
+    line-height: 15px;
+}
+.bottom {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom nav {
+    display: flex;
+    align-items: center;
+}
+.first__nav {
+    gap: 25px;
+}
+.second__nav {
+    gap: 37px;
+}
+.bottom__line {
+    height: 15px;
+    background: #006195;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

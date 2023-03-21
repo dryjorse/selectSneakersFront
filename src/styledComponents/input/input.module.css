@@ -1,0 +1,30 @@
+.box {
+    position: relative;
+    max-width: 580px;
+    width: 100%;
+}
+.inputBox {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #006195;
+    border-radius: 10px;
+    background: white;
+    user-select: none;
+    overflow: hidden;
+    z-index: 2;
+}
+.input {
+    margin-right: 10px;
+    border: none;
+    flex: 1 1 100%;
+    outline: none;
+    align-self: stretch;
+    font-size: 20px;
+    caret-color: #006195;
+}
+.inputBox button {
+    align-self: stretch;
+    border-radius: 10px 0 0 10px;
+}

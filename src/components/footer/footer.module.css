@@ -1,0 +1,29 @@
+.footer {
+    padding-top: 33px;
+}
+.links__box {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+.links ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.input__box {
+    margin: 55px 0 63px;
+    display: flex;
+    justify-content: center;
+}
+.end {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.end span {
+    color: #9C9C9C;
+    font-weight: 300;
+    line-height: 30px;
+}
