@@ -25,7 +25,7 @@ const similarSlice = createSlice({
                 state.status = 'loading'
             })
             .addCase(getSimilarProducts.fulfilled, (state, action) => {
-                state.products = action.payload
+                state.products = action.payload?.result
                 state.status = 'finish'
             })
             .addCase(getSimilarProducts.rejected, state => {

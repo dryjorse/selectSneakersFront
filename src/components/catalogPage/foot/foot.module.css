@@ -1,0 +1,28 @@
+.foot {
+    padding: 70px 0 105px;
+    text-align: center;
+}
+.more__btn {
+    color: #006195;
+    font-size: 20px;
+    line-height: 24px;
+}
+.more__btn:active {
+    color: #083750;
+}
+.line {
+    margin: 16px 0 37px;
+    height: 1px;
+    background: #00000033;
+}
+.pagination__box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.next {
+    color: #7C7C7C;
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: 300;
+}

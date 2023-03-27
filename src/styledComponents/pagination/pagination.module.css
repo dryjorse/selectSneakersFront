@@ -1,0 +1,20 @@
+.pagination {
+    display: flex;
+    gap: 6px;
+}
+.item {
+    border: 0.4px solid #908E8E;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.item.active {
+    border-color: #006195;
+    background: #006195;
+    color: white;
+}

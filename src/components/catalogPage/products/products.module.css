@@ -1,0 +1,13 @@
+.container {
+    min-height: 500px;
+}
+.products__list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 33px;
+}
+.text {
+    display: block;
+    text-align: center;
+}

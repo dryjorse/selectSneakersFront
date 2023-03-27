@@ -4,7 +4,7 @@ import { ReactComponent as Like } from '../../assets/images/card/like.svg';
 import { ReactComponent as Basket } from '../../assets/images/card/basket.svg';
 import Button from '../button/Button';
 
-function Card({product}) {
+function Card({product, link}) {
     const capitalize = name => name.split(' ').map(str => str[0] + str.slice(1)).join(' ') 
 
     return (
@@ -46,7 +46,7 @@ function Card({product}) {
                     </div>
                 </div>
                 <div className={s.links}>
-                    <Button link={`/catalog/${product.id}`}>Подробнее</Button>
+                    <Button link={link || `/catalog/${product.id}`}>Подробнее</Button>
                     <Button link={`/basket`} pg={'6px 24px'}><Basket /></Button>
                 </div>
             </div>

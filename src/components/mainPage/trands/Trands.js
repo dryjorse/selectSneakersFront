@@ -28,7 +28,7 @@ function Trands() {
                 >
                     {trands.map((product) => 
                         <SwiperSlide key={product.id}>
-                            <Card product={product} />
+                            <Card link='/catalog' product={product} />
                         </SwiperSlide>
                     )}
                 </Swiper>

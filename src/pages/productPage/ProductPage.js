@@ -16,12 +16,12 @@ function ProductPage() {
     const similarStatus = useSelector(store => store.similar.status)
 
     useEffect(() => {
-        dispatch(getProduct(id))
         window.scrollTo({
             top: 0,
             left: 0,
             behavior: 'smooth',
         })
+        dispatch(getProduct(id))
     }, [dispatch, id])
 
     if(productStatus === 'loading' || similarStatus === 'loading') {

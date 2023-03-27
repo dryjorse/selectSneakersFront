@@ -1,0 +1,80 @@
+.checkbox__box {
+    cursor: pointer;
+}
+.label {
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+}
+.active .label {
+    color: black;
+}
+.input {
+    cursor: pointer;
+    display: none;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+.checkbox .check {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #9C9C9C;
+    border-radius: 2px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.checkbox .mark {
+    transition: opacity 0.1s ease-in;
+}
+.numbers .label {
+    display: block;
+    border: 1px solid #908E8E;
+    border-radius: 10px;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    line-height: 30px;
+}
+.numbers.active .label {
+    background: #006194;
+    border: 1px solid #006194;
+    color: white;
+}
+.colors .label {
+    padding: 5px;
+    border: 1px solid #908E8E;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.colors.active .label {
+    background: #006195;
+}
+.colors .label label {
+    display: block;
+    border-radius: 10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.intermediate .label {
+    display: block;
+    border: 1px solid #908E8E;
+    border-radius: 5px;
+    padding: 7px;
+    width: 185px;
+    color: black;
+}
+.intermediate.active .label {
+    background: #006195;
+    border-color: #006195;
+    color: white;
+}

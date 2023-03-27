@@ -33,18 +33,20 @@
     font-size: 24px;
     line-height: 30px;
 }
-.filter__box {
-    position: absolute;
-    top: 100px;
-    border: 1px solid #908E8E;
-    border-radius: 10px;
-    min-width: 200px;
-    background: white;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+.content {
+    padding: 20px;
 }
-.filter__box.active {
-    opacity: 1;
+.content li {
+    cursor: pointer;
+}
+.content label {
+    color: #7E7E7E;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+}
+.prices {
+    padding: 25px 32px;
 }
 .apply {
     padding: 15px 0;
@@ -56,4 +58,83 @@
     font-size: 22px;
     line-height: 22px;
     text-align: center;
+}
+.apply:active {
+    filter: brightness(80%);
+}
+.categories ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.brands ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 48px;
+    grid-row-gap: 20px;
+}
+.sizes ul, .colors ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.seasons ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.prices ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.clear__color button, .select__label {
+    padding: 5px;
+    border: 1px solid #908E8E;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clear__color div, .select__label label {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background: #D9D9D9;
+    cursor: pointer;
+}
+.select__color input {
+    display: none;
+}
+.select__label {
+    transition: all 0.1s ease-in;
+}
+.select__label label {
+    background: conic-gradient(from 176.82deg at 50% 50%, #AB29FA -25.41deg, #3F91FA 32.75deg, #00CDFA 60.08deg, #00FFFF 88.34deg, #00FA55 125.91deg, #00FA55 164.39deg, #B9FA00 193.21deg, #FAF000 229.02deg, #FAA500 265.9deg, #FA0000 287.8deg, #FA002D 287.84deg, #E9008C 295.5deg, #D700FA 311.33deg, #AB29FA 334.59deg, #3F91FA 392.75deg);
+}
+.select__price div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.select__price > div {
+    display: flex;
+    gap: 13px;
+}
+.select__price span, .select__price input {
+    font-size: 18px;
+    line-height: 30px;
+    color: #908E8E;
+}
+.select__price input {
+    border: 1px solid #908E8E;
+    border-radius: 5px;
+    padding: 5px;
+    width: 65px;
+    color: black;
+    font-size: 16px;
 }

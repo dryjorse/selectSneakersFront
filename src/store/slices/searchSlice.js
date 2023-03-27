@@ -23,7 +23,7 @@ const searchSlice = createSlice({
             })
             .addCase(getSearchedProducts.fulfilled, (state, action) => {
                 state.status = 'finish'
-                state.products = action.payload
+                state.products = action.payload?.result
             })
             .addCase(getSearchedProducts.rejected, (state) => {
                 state.status = 'rejected'

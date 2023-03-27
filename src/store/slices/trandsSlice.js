@@ -26,7 +26,7 @@ const trandsSlice = createSlice({
             })
             .addCase(getTrands.fulfilled, (state, action) => {
                 state.status = 'finish'
-                state.trands = action.payload
+                state.trands = action.payload?.result
             })
             .addCase(getTrands.rejected, (state) => {
                 state.status = 'rejected'

@@ -14,7 +14,7 @@ const productSlice = createSlice({
     name: 'productSlice',
     initialState: {
         status: '',
-        product: {}
+        product: {},
     },
     extraReducers: builder =>
         builder
