@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/selectSneakersFront/static/css/main.3fc2c1dd.css",
-    "main.js": "/selectSneakersFront/static/js/main.45f171d7.js",
+    "main.js": "/selectSneakersFront/static/js/main.492a1cee.js",
     "static/media/logo.svg": "/selectSneakersFront/static/media/logo.ed1d262e06aab1cc9c0351eb94d4d85a.svg",
     "static/media/guarantee.svg": "/selectSneakersFront/static/media/guarantee.1a2962a1652db1fae20a8ca2cd9256a3.svg",
     "static/media/whatsapp.svg": "/selectSneakersFront/static/media/whatsapp.52df1c252ddd9d1de599c7609173a973.svg",
@@ -22,10 +22,10 @@
     "static/media/estimate.svg": "/selectSneakersFront/static/media/estimate.2ae3ff1f18aef5e3817d9c308cc15a50.svg",
     "static/media/check.svg": "/selectSneakersFront/static/media/check.fb6bafd587c84f3e8f6a3b3e6f8e0aba.svg",
     "main.3fc2c1dd.css.map": "/selectSneakersFront/static/css/main.3fc2c1dd.css.map",
-    "main.45f171d7.js.map": "/selectSneakersFront/static/js/main.45f171d7.js.map"
+    "main.492a1cee.js.map": "/selectSneakersFront/static/js/main.492a1cee.js.map"
   },
   "entrypoints": [
     "static/css/main.3fc2c1dd.css",
-    "static/js/main.45f171d7.js"
+    "static/js/main.492a1cee.js"
   ]
 }
