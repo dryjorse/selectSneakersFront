@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/selectSneakersFront/static/css/main.3fc2c1dd.css",
+    "main.js": "/selectSneakersFront/static/js/main.45f171d7.js",
+    "static/media/logo.svg": "/selectSneakersFront/static/media/logo.ed1d262e06aab1cc9c0351eb94d4d85a.svg",
+    "static/media/guarantee.svg": "/selectSneakersFront/static/media/guarantee.1a2962a1652db1fae20a8ca2cd9256a3.svg",
+    "static/media/whatsapp.svg": "/selectSneakersFront/static/media/whatsapp.52df1c252ddd9d1de599c7609173a973.svg",
+    "static/media/cup.svg": "/selectSneakersFront/static/media/cup.5bcb58bc1324fb42b88972e24384171a.svg",
+    "static/media/estimate-two.svg": "/selectSneakersFront/static/media/estimate-two.ff4152bc619e36267ccd12427d6d5653.svg",
+    "static/media/support.svg": "/selectSneakersFront/static/media/support.c345fe238051a4491544befdfbebda8d.svg",
+    "static/media/arrow.svg": "/selectSneakersFront/static/media/arrow.91445154bb67a8f8cb8cbcf07563ad75.svg",
+    "static/media/instagram.svg": "/selectSneakersFront/static/media/instagram.ae9752589bbd007db2c758a1ea43ac93.svg",
+    "static/media/basket.svg": "/selectSneakersFront/static/media/basket.c88164be269fbcf830d506ef22830797.svg",
+    "static/media/cross-icon.svg": "/selectSneakersFront/static/media/cross-icon.052bedaa5897bb750ae5e79f12c824f0.svg",
+    "index.html": "/selectSneakersFront/index.html",
+    "static/media/facebook.svg": "/selectSneakersFront/static/media/facebook.8c67f1821cb39011095c9909c1d58905.svg",
+    "static/media/profile.svg": "/selectSneakersFront/static/media/profile.c79c6978e2680aad103edb74cf558f9e.svg",
+    "static/media/favourites.svg": "/selectSneakersFront/static/media/favourites.9cdc9fcc017740990599aace03a49e44.svg",
+    "static/media/like.svg": "/selectSneakersFront/static/media/like.4c5c7cce5016546a35b08c0e1f5de2b7.svg",
+    "static/media/search.svg": "/selectSneakersFront/static/media/search.5e9739fd74b2c7b03255ec7ff837ee6f.svg",
+    "static/media/purchaces.svg": "/selectSneakersFront/static/media/purchaces.5b7e6f25161f0ff10c569387f72ecca9.svg",
+    "static/media/estimate.svg": "/selectSneakersFront/static/media/estimate.2ae3ff1f18aef5e3817d9c308cc15a50.svg",
+    "static/media/check.svg": "/selectSneakersFront/static/media/check.fb6bafd587c84f3e8f6a3b3e6f8e0aba.svg",
+    "main.3fc2c1dd.css.map": "/selectSneakersFront/static/css/main.3fc2c1dd.css.map",
+    "main.45f171d7.js.map": "/selectSneakersFront/static/js/main.45f171d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fc2c1dd.css",
+    "static/js/main.45f171d7.js"
+  ]
+}
