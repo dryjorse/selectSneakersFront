@@ -5,9 +5,9 @@ import { getSimilarProducts, selectedSimilarProducts } from '../../../store/slic
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper'
 import Title from '../../../styledComponents/title/Title'
+import Card from '../../../styledComponents/card/Card'
 import s from './similar.module.css'
 import 'swiper/css'
-import Card from '../../../styledComponents/card/Card'
 
 function Similar() {
     const dispatch = useDispatch()
@@ -16,7 +16,7 @@ function Similar() {
 
     useEffect(() => {
         !status && dispatch(getSimilarProducts(id))
-    }, [dispatch, id])
+    }, [dispatch, id, status])
 
     return (
         <div className={s.main}>

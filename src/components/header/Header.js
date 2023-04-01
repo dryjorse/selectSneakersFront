@@ -5,18 +5,21 @@ import { ReactComponent as ProfileIcon } from '../../assets/images/header/profil
 import { ReactComponent as FavouritesIcon } from '../../assets/images/header/favourites.svg'
 import { ReactComponent as BasketIcon } from '../../assets/images/header/basket.svg'
 import { ReactComponent as SearchIcon } from '../../assets/images/header/search.svg'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Input from '../../styledComponents/input/Input'
 import SeacrhTooltip from '../../styledComponents/searchTooltip/SeacrhTooltip'
 import { useDispatch } from 'react-redux'
 import { getSearchedProducts } from '../../store/slices/searchSlice'
+import { useInput } from '../../hooks/useInput'
 
 function Header() {
     const dispatch = useDispatch()
+    const searchValue = useInput('')
     const [isSearchInpFocused, setIsSearchInpFocused] = useState(false)
 
-    const onChangeSearchInpit = ({target}) => {
-        dispatch(getSearchedProducts(target.value))
+    const onChangeSearchInpit = (e) => {
+        dispatch(getSearchedProducts(e.target.value))
+        searchValue.onChange(e)
     }
 
     const handleSearchInpFocused = ({target}) => {
@@ -40,11 +43,12 @@ function Header() {
                 </nav>
                 <div className={s.bottom}>
                     <nav className={s.first__nav}>
-                        <Link to={'/catalog'}>Мужские</Link>
-                        <Link to={'/catalog'}>Женские</Link>
-                        <Link to={'/catalog'}>Новинки</Link>
+                        <NavLink to={'/catalog?type=man'}>Мужские</NavLink>
+                        <NavLink to={'/catalog?type=woman'}>Женские</NavLink>
+                        <NavLink to={'/catalog?type=news'}>Новинки</NavLink>
                     </nav>
                     <Input 
+                        value={searchValue.value}
                         change={onChangeSearchInpit}
                         focus={handleSearchInpFocused}
                         blur={handleSearchInpFocused}
@@ -60,8 +64,8 @@ function Header() {
                         tooltip={<SeacrhTooltip isActive={isSearchInpFocused} />}
                     ></Input>
                     <nav className={s.second__nav}>
-                        <Link to={'/profile'}><ProfileIcon /></Link>
-                        <Link to={'/favourites'}><FavouritesIcon /></Link>
+                        <Link to={'/profile/my-data'}><ProfileIcon /></Link>
+                        <Link to={'/profile/favourites'}><FavouritesIcon /></Link>
                         <Link to={'/basket'}><BasketIcon /></Link>
                     </nav>
                 </div>

@@ -3,7 +3,7 @@ import $api from '../../http'
 
 export const getProduct = createAsyncThunk('porduct', async (id, {rejectWithValue}) => {
     try {
-        const {data} = await $api('products', {params: {id}})
+        const {data} = await $api('products', {params: {id: id.join(',')}})
         return data
     } catch (e) {
         return rejectWithValue(e)

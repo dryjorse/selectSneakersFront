@@ -2,9 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import s from './button.module.css'
 
-function Button({children, pg, link}) {
-
-    
+function Button({children, pg, link, click, disabled}) {
 
     if(link) return (
         <Link to={link} style={{padding: pg || '14px 28px'}} className={s.btn}>
@@ -13,7 +11,12 @@ function Button({children, pg, link}) {
     )
 
     return (
-        <button style={{padding: pg || '14px 28px'}} className={s.btn}>
+        <button 
+            style={{padding: pg || '14px 28px'}} 
+            className={`${s.btn} ${disabled ? s.disabled : ''}`}
+            disabled={disabled}
+            onClick={click}
+        >
             {children}
         </button>
     )

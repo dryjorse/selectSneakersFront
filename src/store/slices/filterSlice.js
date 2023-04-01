@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { act } from '@testing-library/react'
 import $api from '../../http'
 
 export const getFilterItems = createAsyncThunk('filter-items', async(_, {rejectWithValue}) => {
@@ -14,6 +13,7 @@ export const getFilterItems = createAsyncThunk('filter-items', async(_, {rejectW
 const filterSlice = createSlice({
     name: 'filterSlice',
     initialState: {
+        status: '',
         filterItems: {},
         categories: [],
         brands: [],
@@ -23,6 +23,7 @@ const filterSlice = createSlice({
         selectedColor: '',
         prices: [],
         page: 1,
+        type: '',
     },
     reducers: {
         setCategories: (state, action) => {
@@ -48,18 +49,28 @@ const filterSlice = createSlice({
         },
         setPage: (state, action) => {
             state.page = action.payload
+        },
+        setType: (state, action) => {
+            state.type = action.payload
         }
     },
     extraReducers: builder =>
         builder
+            .addCase(getFilterItems.pending, state => {
+                state.status = 'loading'
+            })
             .addCase(getFilterItems.fulfilled, (state, action) => {
                 state.filterItems = action.payload
+                state.status = 'finish'
+            })
+            .addCase(getFilterItems.rejected, state => {
+                state.status = 'rejected'
             })
 })
 
 export default filterSlice.reducer
 export const {
     setCategories,setBrands, setSizes, setSeasons, 
-    setColors, setSelectedColor, setPrices, setPage
+    setColors, setSelectedColor, setPrices, setPage, setType
 } = filterSlice.actions
 export const selectedFilter = store => store.filter

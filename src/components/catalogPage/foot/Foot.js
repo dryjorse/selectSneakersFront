@@ -10,7 +10,10 @@ function Foot() {
     const productsCount = useSelector(store => store.products.count)
     const productsLimit = useSelector(store => store.products.limit)
     const [visibleProductsCount, setVisibleProductsCount] = useState(24)
-    const {page, categories, brands, sizes, seasons, colors, selectedColor, prices} = useSelector(selectedFilter)
+    const {
+        page, categories, brands, sizes, seasons, 
+        colors, selectedColor, prices, type, status
+    } = useSelector(selectedFilter)
     const getPagesCount = useCallback(() => Math.ceil(
         (visibleProductsCount < productsCount ? visibleProductsCount : productsCount) / 
         productsLimit
@@ -21,7 +24,7 @@ function Foot() {
     }, [dispatch])
   
     useEffect(() => {
-        dispatch(getProducts({
+        if(status) dispatch(getProducts({
             offset: (page - 1) * productsLimit,
             limit: productsLimit,
             category: categories.join(','),
@@ -31,8 +34,9 @@ function Foot() {
             color: [...colors, selectedColor].join(','),
             minPrice: prices.find(price => price.def === 'from')?.price,
             maxPrice: prices.find(price => price.def === 'before')?.price,
+            type,
         }))
-    }, [page, productsLimit, dispatch])
+    }, [page, productsLimit, dispatch, type])
 
     useEffect(() => {
         if(getPagesCount() > 1 && getPagesCount() < page) {

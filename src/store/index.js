@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
+import favouritesSlice from './slices/favouritesSlice'
 import filterSlice from './slices/filterSlice'
 import gifsSlice from './slices/gifsSlice'
 import newsSlice from './slices/newsSlice'
@@ -8,6 +9,7 @@ import reviewsSlice from './slices/reviewsSlice'
 import searchSlice from './slices/searchSlice'
 import similarSlice from './slices/similarSlice'
 import trandsSlice from './slices/trandsSlice'
+import userSlice from './slices/userSlice'
 
 export default configureStore({
     reducer: {
@@ -20,5 +22,7 @@ export default configureStore({
         similar: similarSlice,
         filter: filterSlice,
         products: productsSlice,
+        user: userSlice,
+        favourites: favouritesSlice
     }
 })

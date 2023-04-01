@@ -15,6 +15,9 @@
     overflow: hidden;
     z-index: 2;
 }
+.error .inputBox {
+    border-color: #FF0000;
+}
 .input {
     margin-right: 10px;
     border: none;
@@ -27,4 +30,9 @@
 .inputBox button {
     align-self: stretch;
     border-radius: 10px 0 0 10px;
+}
+.block__btn {
+    display: flex;
+    align-items: center;
+    padding-right: 28px;
 }

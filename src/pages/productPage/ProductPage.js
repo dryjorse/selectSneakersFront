@@ -21,7 +21,7 @@ function ProductPage() {
             left: 0,
             behavior: 'smooth',
         })
-        dispatch(getProduct(id))
+        dispatch(getProduct([id]))
     }, [dispatch, id])
 
     if(productStatus === 'loading' || similarStatus === 'loading') {

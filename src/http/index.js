@@ -1,8 +1,9 @@
 import axios from 'axios'
 
-export const API_URL = 'https://real-rose-badger-vest.cyclic.app'
+export const API_URL = 'http://localhost:3001'
 
 const $api = axios.create({
+    withCredentials: true,
     baseURL: API_URL
 })
 

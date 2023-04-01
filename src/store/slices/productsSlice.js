@@ -4,12 +4,14 @@ import $api from "../../http";
 
 export const getProducts = createAsyncThunk('products', async(params, {rejectWithValue}) => {
     try {
-        const {data} = await $api('products', {params})
+        const {data} = await $api('products')
         return data
     } catch (e) {
         return rejectWithValue(e)
     }
 })
+
+
 
 const productsSlice = createSlice({
     name: 'productsSlice',
@@ -30,6 +32,9 @@ const productsSlice = createSlice({
     },
     extraReducers: builder =>
         builder
+            .addCase(getProducts.pending, (state) => {
+                state.status = 'pending'
+            })
             .addCase(getProducts.fulfilled, (state, action) => {
                 state.products = action.payload?.result
                 state.pricesLimit = action.payload?.pricesLimit
@@ -40,6 +45,9 @@ const productsSlice = createSlice({
                 }
 
                 state.status = 'finish'
+            })
+            .addCase(getProducts.rejected, state => {
+                state.status = 'rejected'
             })
 })
 

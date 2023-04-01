@@ -1,0 +1,107 @@
+.container {
+    margin: 0 auto;
+    padding: 145px 0 115px;
+    width: 100%;
+    max-width: 555px;
+    text-align: center;
+}
+.auth h2 {
+    margin-bottom: 8px;
+    color: #006195;
+    font-size: 34px;
+}
+.auth span, .auth label {
+    color: #908E8E; 
+    font-size: 20px;
+    font-weight: 300; 
+}
+.auth .head {
+    margin-bottom: 55px;
+}
+.form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form__input {
+    font-size: 16px !important;
+    font-weight: 500;
+}
+.form__input::placeholder {
+    font-size: 14px !important;
+}
+.flex {
+    display: flex;
+    gap: 20px;
+}
+.middleware__block {
+    margin: 13px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.check {
+    margin: 22px 0 55px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.check__two {
+    display: flex;
+    align-items: flex-end;
+}
+.small, .small a {
+    font-size: 12px !important;
+    color: #7C7C7C !important;
+    cursor: pointer;
+}
+.small__two {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: black !important;
+    cursor: pointer;
+}
+.small a {
+    text-decoration: underline;
+}
+.button__box {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+}
+.link {
+    color: #006195;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-decoration: underline;
+}
+.browsers {
+    margin-top: 57px;
+}
+.browsers__top {
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+}
+.browsers__top span {
+    margin: 0 39px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.browsers__top .line {
+    flex: 1 1 auto;
+    height: 1px;
+    background: #7C7C7C;
+}
+.browsers .links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+.bottom {
+    margin-top: 50px;
+}
+.help__link, .help__link a {
+    font-size: 12px !important;
+}

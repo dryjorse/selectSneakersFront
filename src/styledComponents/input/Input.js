@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import s from './input.module.css'
+import { ReactComponent as BlockIcon } from '../../assets/images/common/block.svg'
+import { ReactComponent as BlockedIcon } from '../../assets/images/common/blocked.svg'
 
-function Input({children, leftIcon, rightElem, type, tooltip, change, focus, blur}) {
-    const [value, setValue] = useState('')
-
-    const onChange = (e) => {
-        setValue(e.target.value)
-        change?.(e)
-    }
+function Input({
+    children, leftIcon, rightElem, type, tooltip, 
+    change, focus, blur, inputS, value, isError, isPassword
+}) {
+    const [isBlocked, setIsBlocked] = useState(isPassword)
 
     return (
-        <div className={s.box}>
+        <div className={`${s.box} ${isError ? s.error : ''}`}>
             <div className={s.inputBox}>
                 {leftIcon}
                 <input 
@@ -18,13 +18,19 @@ function Input({children, leftIcon, rightElem, type, tooltip, change, focus, blu
                     style={{
                         marginLeft: leftIcon ? '15px' : '10px'
                     }}
-                    type={type || 'text'} 
-                    className={s.input}
+                    type={isPassword ? isBlocked ? 'password' : 'text' : type || 'text'} 
+                    className={`${s.input} ${inputS}`}
                     placeholder={children}
-                    onChange={onChange}
+                    onChange={change}
                     onFocus={focus}
                     onBlur={blur}
                 />
+                {
+                isPassword && 
+                    <button className={s.block__btn} onClick={() => setIsBlocked(bool => !bool)}>
+                        {isBlocked ? <BlockedIcon /> : <BlockIcon />}
+                    </button>
+                }
                 {rightElem}
             </div>
             {tooltip}

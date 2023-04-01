@@ -18,8 +18,8 @@ function Head() {
     })
 
     useEffect(() => {
-        dispatch(getFilterItems())
-    }, [dispatch])
+        if(!filterStore.status) dispatch(getFilterItems())
+    }, [dispatch, filterStore.status])
 
     const filterData = [
         {
@@ -161,8 +161,8 @@ function Head() {
             color: [...filterStore.colors, filterStore.selectedColor].join(','),
             minPrice: filterStore.prices.find(price => price.def === 'from')?.price,
             maxPrice: filterStore.prices.find(price => price.def === 'before')?.price,
+            type: filterStore.type,
         }))
-        console.log(filterStore);
     }
 
     return (
